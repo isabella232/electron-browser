@@ -5,17 +5,41 @@
     <script src="../dist/js/browser-app.js"></script>
   <body>
     <div id="controls">
-      <button id="back" title="Go Back" disabled="true">&#9664;</button>
-      <button id="forward" title="Go Forward" disabled="true">&#9654;</button>
-      <button id="home" title="Go Home">&#8962;</button>
-      <button id="reload" title="Reload">&#10227;</button>
+      <div class="browser" data-mount="browser-controls">
+        <button id="back" title="Go Back" disabled="true">&#9664;</button>
+        <button id="forward" title="Go Forward" disabled="true">&#9654;</button>
+        <button id="home" title="Go Home">&#8962;</button>
+        <button id="reload" title="Reload">&#10227;</button>
 
-      <form id="location-form">
-        <div id="center-column">
-          <input id="location" type="text" value="http://www.github.com/">
+        <form id="location-form">
+          <div id="center-column">
+            <input id="location" type="text" value="http://www.github.com/">
+          </div>
+          <input type="submit" value="Go">
+        </form>
+      </div>
+
+      <div class="invoca" data-mount="invoca-controls">
+        <img data-mount="invoca-icon" src="images/icon-active.png"/>
+
+        <div class="details">
+          <span class="header">InvocaJS Version:</span>
+          <span class="info" data-mount="library-version"></span>
         </div>
-        <input type="submit" value="Go">
-      </form>
+
+        <div class="details">
+          <span class="header">Revision:</span>
+          <span class="info" data-mount="tag-revision"></span>
+        </div>
+
+        <div class="details">
+          <span class="header">Cache:</span> <span class="info" data-mount="cache"></span>
+        </div>
+
+        <div class="details">
+          <span class="header">Request Data:</span> <span class="info" data-mount="request-data"></span>
+        </div>
+      </div>
     </div>
 
     <webview src="http://www.github.com/" style="width:640px; height:480px"></webview>

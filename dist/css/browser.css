@@ -32,33 +32,35 @@ input[type=submit]:active {
   padding: 3px;
   border-bottom: solid 1px #ccc;
   background-color: #eee;
+}
+#controls .browser {
   display: -webkit-flex;
   -webit-flex-direction: column;
 }
-#controls button, #controls input {
+#controls .browser button, #controls .browser input {
   font-size: 14px;
   line-height: 24px;
   border-radius: 2px;
   padding: 0 6px;
 }
-#controls #home, #controls #terminate {
+#controls .browser #home, #controls .browser #terminate {
   font-size: 24px;
 }
-#controls #reload {
+#controls .browser #reload {
   font-size: 20px;
 }
-#controls #location {
+#controls .browser #location {
   border: solid 1px #ccc;
   padding: 2px;
   width: 100%;
   -webkit-box-sizing: border-box;
 }
-#controls #location-form {
+#controls .browser #location-form {
   -webkit-flex: 1;
   display: -webkit-flex;
   -webit-flex-direction: column;
 }
-#controls #center-column {
+#controls .browser #center-column {
   -webkit-flex: 1;
 }
 
@@ -123,6 +125,26 @@ webview {
 
 .killed #sad-webview #crashed-label {
   display: none;
+}
+
+#controls .invoca {
+  display: -webkit-flex;
+  -webit-flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: center;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+#controls .invoca img {
+  width: 30px;
+  height: 30px;
+}
+#controls .invoca .details {
+  font-size: 14px;
+  margin: 0 15px;
+}
+#controls .invoca .details .header {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=dist/css/browser.css.map */

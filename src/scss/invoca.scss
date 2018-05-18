@@ -1,0 +1,27 @@
+$img-size: 30px;
+$font-size: 14px;
+
+#controls {
+  .invoca {
+    display: -webkit-flex;
+    -webit-flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: center;
+    margin-top: 5px;
+    padding: 5px 10px;
+
+    img {
+      width: $img-size;
+      height: $img-size;
+    }
+
+    .details {
+      font-size: 14px;
+      margin: 0 15px;
+
+      .header {
+        font-weight: bold;
+      }
+    }
+  }
+}
