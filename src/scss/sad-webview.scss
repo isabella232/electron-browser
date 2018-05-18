@@ -1,0 +1,51 @@
+#sad-webview {
+  h2 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 11px;
+  }
+}
+
+
+#sad-webview,
+webview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#sad-webview,
+.exited webview {
+  visibility: hidden;
+  visibility: hidden;
+}
+
+.exited #sad-webview {
+  visibility: visible;
+  background: #343f51;
+  text-align: center;
+  color: #fff;
+}
+
+#sad-webview-icon {
+  font-size: 96px;
+  margin-bottom: 10px;
+}
+
+.exited #sad-webview #killed-label {
+  display: none;
+}
+
+.killed #sad-webview {
+  background: #393058;
+}
+
+.killed #sad-webview #killed-label {
+  display: block;
+}
+
+.killed #sad-webview #crashed-label {
+  display: none;
+}
