@@ -1,4 +1,5 @@
 import { setLoading } from './is-loading'
+import { default as beginChecking, stopChecking } from './invoca'
 
 function handleExit(event) {
   console.log(event.type);
@@ -13,12 +14,14 @@ function handleExit(event) {
 function handleLoadCommit() {
   resetExitedState();
   var webview = document.querySelector('webview');
-  document.querySelector('#location').value = webview.getURL();
-  document.querySelector('#back').disabled = !webview.canGoBack();
+  document.querySelector('#location').value   = webview.getURL();
+  document.querySelector('#back').disabled    = !webview.canGoBack();
   document.querySelector('#forward').disabled = !webview.canGoForward();
+  beginChecking();
 }
 
 function handleLoadStart(event) {
+  stopChecking();
   document.body.classList.add('loading');
   setLoading(true);
   resetExitedState();
