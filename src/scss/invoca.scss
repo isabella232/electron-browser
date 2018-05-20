@@ -5,8 +5,8 @@ $font-size: 14px;
   .invoca {
     display: -webkit-flex;
     -webit-flex-direction: column;
-    -webkit-justify-content: flex-start;
     -webkit-align-items: center;
+    justify-content: space-evenly;
     margin-top: 5px;
     padding: 5px 10px;
 

@@ -14,6 +14,13 @@ function queryElements() {
   };
 }
 
+function resetDetails() {
+  toolbar.libraryVersion.innerText = '-';
+  toolbar.tagRevision.innerText = '-';
+  toolbar.cache.innerText = '-';
+  toolbar.requestData.innerText = '-';
+}
+
 function updateDetails(Invoca) {
   updateFromPage(toolbar.libraryVersion, 'Invoca.PNAPI.version');
   updateFromPage(toolbar.tagRevision,    'Invoca.Client.getRevisionId()');
@@ -56,5 +63,7 @@ export default function beginChecking() {
 
 export function stopChecking() {
   clearInterval(interval);
+  queryElements();
+  resetDetails();
 }
 
